@@ -15,6 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.misaki.tutorialmod.TutorialMod;
 import net.misaki.tutorialmod.item.ModCreativeModTab;
 import net.misaki.tutorialmod.item.ModItems;
+import net.misaki.tutorialmod.item.custom.JumpyBlock;
 
 import java.util.function.Supplier;
 
@@ -28,6 +29,11 @@ public class ModBlocks {
     //Adding the crafted block with the properties of stone int the Turorial Mod Tab
     public static final RegistryObject<Block> ZIRCON_BLOCK = registerBlock("zircon_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()),
+            ModCreativeModTab.TUTORIAL_TAB);
+
+    //Adding the Jumpy Block
+    public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
+            () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()),
             ModCreativeModTab.TUTORIAL_TAB);
 
 
