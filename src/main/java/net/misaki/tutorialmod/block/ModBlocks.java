@@ -16,6 +16,7 @@ import net.misaki.tutorialmod.TutorialMod;
 import net.misaki.tutorialmod.item.ModCreativeModTab;
 import net.misaki.tutorialmod.item.ModItems;
 import net.misaki.tutorialmod.item.custom.JumpyBlock;
+import net.misaki.tutorialmod.item.custom.ZirconLampBlock;
 
 import java.util.function.Supplier;
 
@@ -34,6 +35,11 @@ public class ModBlocks {
     //Adding the Jumpy Block
     public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
             () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()),
+            ModCreativeModTab.TUTORIAL_TAB);
+    //Adding the Zircon Lamp Block
+    public static final RegistryObject<Block> ZIRCON_LAMP = registerBlock("zircon_lamp",
+            () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops().
+                    lightLevel(blockState -> blockState.getValue(ZirconLampBlock.LIT) ? 15: 0)),
             ModCreativeModTab.TUTORIAL_TAB);
 
 

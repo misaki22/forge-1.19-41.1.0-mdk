@@ -46,6 +46,9 @@ public class EightBallItem extends Item {
     }
 
     private void outputRandomNumber(Player player) {
+        //Server: Main hand & Offhand
+        //Client: Main hand & Offhand
+
         player.sendSystemMessage(Component.literal("Your Number is " + getRandomNumber()));
     }
 
